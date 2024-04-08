@@ -34,7 +34,7 @@ public class FileHandler {
             );
 
             totalData.add(data);
-            System.out.println(data.toString());
+            //System.out.println(data.toString());
 
         }
         sc.close();

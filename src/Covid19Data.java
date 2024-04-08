@@ -1,34 +1,41 @@
 public class Covid19Data {
     private String region;
     private String aldersgruppe;
-    private int bekrÃ¦ftedeTilfÃ¦ldeIAlt;
-    private int dÃ¸de;
-    private int indlagtePÃ¥Intensiv;
+    private int bekræftedeTilfældeIAlt;
+    private int døde;
+    private int indlagtePåIntensiv;
     private int indlagte;
     private String dato;
 
-    public Covid19Data(String region, String aldersgruppe, int bekrÃ¦ftedeTilfÃ¦ldeIAlt,
-                       int dÃ¸de, int indlagtePÃ¥Intensiv, int indlagte, String dato) {
+    public Covid19Data(String region, String aldersgruppe, int bekræftedeTilfældeIAlt,
+                       int døde, int indlagtePåIntensiv, int indlagte, String dato) {
         this.region = region;
         this.aldersgruppe = aldersgruppe;
-        this.bekrÃ¦ftedeTilfÃ¦ldeIAlt = bekrÃ¦ftedeTilfÃ¦ldeIAlt;
-        this.dÃ¸de = dÃ¸de;
-        this.indlagtePÃ¥Intensiv = indlagtePÃ¥Intensiv;
+        this.bekræftedeTilfældeIAlt = bekræftedeTilfældeIAlt;
+        this.døde = døde;
+        this.indlagtePåIntensiv = indlagtePåIntensiv;
         this.indlagte = indlagte;
         this.dato = dato;
     }
 
-    @Override
-    public String toString() {
-        return "Covid19 data{" +
-                "Region=" + region +
-                ", Aldersgruppe='" + aldersgruppe + '\'' +
-                ", BekrÃ¦ftede tilfÃ¦lde i alt='" + bekrÃ¦ftedeTilfÃ¦ldeIAlt + '\'' +
-                ", DÃ¸de='" + dÃ¸de + '\'' +
-                ", Indlagte pÃ¥ intensiv='" + indlagtePÃ¥Intensiv + '\'' +
-                ", Indlagte='" + indlagte + '\'' +
-                ", Dato='" + dato + '\'' +
-                '}';
+    public String getRegion() {
+        return region;
     }
 
+    public String getAldersgruppe() {
+        return aldersgruppe;
+    }
+
+    @Override
+    public String toString() {
+        return "Region: " + region +
+                "\nAldersgruppe: " + aldersgruppe +
+                "\nBekræftede tilfælde i alt: " + bekræftedeTilfældeIAlt +
+                "\nDødsfald: " + døde +
+                "\nIndlagte på intensiv afdeling: " + indlagtePåIntensiv +
+                "\nIndlagte: " + indlagte +
+                "\nDato: " + dato
+                + "\n"
+                ;
+    }
 }
